@@ -34,24 +34,24 @@ prompt.get(schema, function(err, result){
     const k = parseInt(result.value);
 
 
-    sumNums(numsArray, k);
+    console.log(sumNums(numsArray, k));
 
   }
 });
 
-// Function to determine if any two numbers sum to k
+// Function to determine if any two numbers sum to k, passing in an array of numbers and a specific number
 function sumNums(givenNums, x) {
-    let isSum = "Nope, sums are incongruent";// indicator of whether or not two numbers sum to value
+    let isSum = "Nope, sums are incongruent";// indicator of whether or not two numbers sum to value; false until proven true
     // forEach loops through given number array
     givenNums.forEach(function(element){
-        // for loop assigns elements index position as starting point then checks if that initial number plus any of the following numbers sums to k. set isSum to true if k is a sum.
-        for (i = givenNums.indexOf(element); i < (givenNums.length - 1); i++){
+        // for loop assigns elements index position as starting point then checks if that initial number plus any of the following numbers sums to k. set isSum to true if k is a sum. "givenNums.length-1" because we dont need to run function on the last item in array
+        for (i = givenNums.indexOf(element); i < (givenNums.length- 1 ); i++){
               if ((givenNums[givenNums.indexOf(element)] + givenNums[(i + 1)]) === x) {
                 isSum = "Sweet... at least two numbers sum correctly";
               }
             }
     });
 
-    console.log(isSum);
+    return isSum;
 
 }
