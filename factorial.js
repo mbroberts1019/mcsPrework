@@ -14,6 +14,9 @@ var schema = {
   }
 };
 
+console.log("This program will return the factorial of a given number. Can you figure out what javascript thinks is too big of a number for humans to comprehend?");
+
+
 //******** Start Prompt****************
 prompt.start();
 

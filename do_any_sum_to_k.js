@@ -2,12 +2,15 @@
 
 const prompt = require ("prompt");
 
+
+console.log("We will determine if, within a set a set of single digit numbers, any two numbers sum to another value." );
+
 // Schema for Prompt
 
 var schema = {
   properties: {
     number: {
-      message: "We will determine if within a set a set of numbers any two digits sum to another number. Enter several single digit numbers with commas seperating them but no spaces."
+      message: "Enter several single digit numbers with commas seperating them but no spaces."
     },
     value: {
       message: "Enter a value for the sum"
@@ -38,13 +41,13 @@ prompt.get(schema, function(err, result){
 
 // Function to determine if any two numbers sum to k
 function sumNums(givenNums, x) {
-    let isSum = "False";// indicator of whether or not two numbers sum to value
+    let isSum = "Nope, sums are incongruent";// indicator of whether or not two numbers sum to value
     // forEach loops through given number array
     givenNums.forEach(function(element){
         // for loop assigns elements index position as starting point then checks if that initial number plus any of the following numbers sums to k. set isSum to true if k is a sum.
         for (i = givenNums.indexOf(element); i < (givenNums.length - 1); i++){
               if ((givenNums[givenNums.indexOf(element)] + givenNums[(i + 1)]) === x) {
-                isSum = "true";
+                isSum = "Sweet... at least two numbers sum correctly";
               }
             }
     });
