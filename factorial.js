@@ -54,3 +54,13 @@ const factorial = function(num) {
   return sum;
 
 };
+
+
+// and then I learned a simple recursive way:
+//
+// const factorial = function(num){
+//     if(num === 1){            // can condense to if(num === 1) return 1;
+//         return 1;
+//     }
+//     return num * factorial(num - 1)
+// };
