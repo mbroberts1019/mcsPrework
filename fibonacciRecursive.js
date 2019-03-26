@@ -30,7 +30,7 @@ prompt.get(schema, function(err, result){
     }
 });
 
-
+// trying out helper function recursion: create array, helpr function pushes numbers to array in Fibonacci fashion, return the Nth number of array
 const fib = function(num){
     if (num === 1 || num === 2){
             return 1;
@@ -42,10 +42,7 @@ const fib = function(num){
         if(input === 0){
             return;
         }
-        if (fibArr.length === 0){
-            fibArr.push(1);
-        }
-        else if (fibArr.length === 1){
+         if (fibArr.length <= 1){
             fibArr.push(1);
 
         } else{
