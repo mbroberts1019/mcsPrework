@@ -27,6 +27,10 @@ prompt.get(schema, function(err, result){
   }
 });
 
+/*
+  I prefer using these multiline comments whenever text goes beyond the 'guide'
+  line. It should show up in gray in Atom. (if you are using atom).
+*/
 // Cointoss function generate 0 or 1 a specified number of times 1's increment heads 0s increment tails. calculate probability from heads/(heads+tails)
 const coinToss = function(tossCount){
   let heads = 0;
@@ -40,9 +44,22 @@ const coinToss = function(tossCount){
     } else if (currentNum === 0){
       tails++;
     }else{
+      /*
+        check out console.error()! It will provide you with a stack trace and
+        will be highlighted in red in the console.
+      */
       console.log("Error, Math is broken");
     }
   }
+
+  /*
+    Here you could go ahead and just return the value, instead of assign it to
+    a constant.
+
+    return Math.round((heads / (heads+tails))*100);
+
+    just small stuff!
+  */
 
   const probability = Math.round((heads / (heads+tails))*100);
 

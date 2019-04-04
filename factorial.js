@@ -34,7 +34,9 @@ prompt.get(schema, function(err, result) {
   }
 });
 
-
+/*
+  No need to double up on the comment slashes.
+*/
 //// Create factorial function
 const factorial = function(num) {
 
@@ -48,6 +50,11 @@ const factorial = function(num) {
   /// Sum will be total after each multiplication in forEach loop
   let sum = 1;
   numsArray.forEach(function(num) {
+    /*
+      this could also be simplified to:
+
+      sum *= num;
+    */
     sum = sum * num;
   });
 

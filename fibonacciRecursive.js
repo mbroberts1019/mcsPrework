@@ -30,6 +30,19 @@ prompt.get(schema, function(err, result){
     }
 });
 
+
+/*
+  I've noticed that some of your use of whitespace and formatting is
+  inconsistent. It's okay to pad functions with empty lines (although I don't
+  prefer it myself), but make sure you are very consistent with your style.
+
+  Also, proper indentation is incredibly important! A quick shortcut is
+  Edit -> Lines -> Autoindent
+
+  but I would also recommend selecting a block of code, and using Cmd+ [ or ]
+  to shift indent levels.
+*/
+
 // trying out helper function recursion: create array, helpr function pushes numbers to array in Fibonacci fashion, return the Nth number of array
 const fib = function(num){
     if (num === 1 || num === 2){
